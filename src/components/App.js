@@ -1,14 +1,16 @@
-import React from 'react'
-import Header from './Header'
-import GeoMap from './GeoMap'
+import React from "react";
+import Header from "./Header";
+import GeoMap from "./GeoMap";
+import { useSelector } from "react-redux";
 
 const App = () => {
+  const {isLoading} = useSelector(store => store.search);
   return (
-    <div className='h-screen'>
+    <div className="h-screen">
       <Header />
-      <GeoMap />
+      {!isLoading? <GeoMap /> : ''}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
