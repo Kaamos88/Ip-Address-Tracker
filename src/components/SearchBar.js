@@ -14,22 +14,29 @@ const SearchBar = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit} className="flex justify-center h-12">
-        <input
-          value={text}
-          onChange={(e) => dispatch(setText(e.target.value))}
-          placeholder="Search for any IP address or domain"
-          className="w-1/3 rounded-l-xl p-3 text-lg outline-none cursor-pointer"
-        />
-        <button
-          type="submit"
-          className="px-5 rounded-r-xl bg-black hover:bg-[#2b2b2b] text-white"
-        >
-          {" "}
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
-            <path fill="none" stroke="#FFF" strokeWidth="3" d="M2 1l6 6-6 6" />
-          </svg>{" "}
-        </button>
+      <form onSubmit={onSubmit}>
+        <div className="flex w-11/12 lg:w-2/5 mx-auto">
+          <input
+            value={text}
+            onChange={(e) => dispatch(setText(e.target.value))}
+            placeholder="Search for any IP address or domain"
+            className="w-full rounded-l-xl pl-6 py-4 lg:py-3 text-lg outline-none cursor-pointer"
+          />
+          <button
+            type="submit"
+            className="px-6 rounded-r-xl bg-black hover:bg-[#2b2b2b] text-white"
+          >
+            {" "}
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+              <path
+                fill="none"
+                stroke="#FFF"
+                strokeWidth="3"
+                d="M2 1l6 6-6 6"
+              />
+            </svg>{" "}
+          </button>
+        </div>
       </form>
     </>
   );
