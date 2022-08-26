@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const url = 'https://geo.ipify.org/api/v2';
-const KEY = 'at_BiPMzUTHjHv5HuJnmkaWSkYDk6CQZ';
+const KEY = 'at_yxPIwxywAxoVEukWaD8t1mRvfNfcT';
 
 export const getGeoIp = createAsyncThunk('search/getGeoIp',
   async (_, thunkAPI) => {
